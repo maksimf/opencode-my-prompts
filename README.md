@@ -45,7 +45,7 @@ opencode plugin list
 
 | Action | How |
 | --- | --- |
-| Open / close the panel | `alt+m`, `/myprompts`, or the command palette ("My prompts") |
+| Open / close the panel | `<leader>p` (ctrl+x, then p), `/myprompts`, or the command palette ("My prompts") |
 | Jump to a prompt | Click its row in the panel |
 
 The panel lists every user message of the session, newest first, grouped by

@@ -52,6 +52,7 @@ async function scenario(presentation: "panel" | "fullscreen") {
     reachable: new Set<string>(["my-prompts.toggle", "pane.focus.left"]),
     dispatches: [] as string[],
     closed: false,
+    bind: undefined as unknown,
     claim: undefined as { render: (input: PanelInput) => JSX.Element } | undefined,
   }
 
@@ -68,7 +69,8 @@ async function scenario(presentation: "panel" | "fullscreen") {
     },
     keymap: {
       layer: (factory: () => unknown) => {
-        factory()
+        const layer = factory() as { commands?: Array<{ id?: string; bind?: unknown }> }
+        state.bind = layer?.commands?.find((command) => command.id === "my-prompts.toggle")?.bind
       },
       dispatch: (id: string) => {
         state.dispatches.push(id)
@@ -121,6 +123,7 @@ async function scenario(presentation: "panel" | "fullscreen") {
     console.log(frame1)
   }
 
+  check("default bind is <leader>p", state.bind === "<leader>p")
   check(`${presentation}: header`, frame0.includes("My prompts"))
   check(`${presentation}: count`, frame0.includes("(3)"))
   check(

@@ -1,6 +1,6 @@
 {
   "name": "opencode-my-prompts",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "OpenCode TUI plugin: a side panel listing only your prompts in the current session. Click one to jump to it.",
   "type": "module",
   "exports": {
@@ -11,13 +11,15 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "smoke": "bun --conditions=browser test/render-smoke.tsx"
+    "smoke": "bun --conditions=browser test/render-smoke.tsx",
+    "probe": "bun test/keybind-probe.tsx"
   },
   "devDependencies": {
     "@opencode/client": "2.2.5",
     "@opencode/plugin": "2.2.5",
     "@opencode/theme": "2.2.5",
     "@opentui/core": "0.8.0",
+    "@opentui/keymap": "^0.8.0",
     "@opentui/solid": "0.8.0",
     "solid-js": "^1.9.12",
     "typescript": "^6.0.3"

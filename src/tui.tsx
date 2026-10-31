@@ -601,7 +601,7 @@ export default Plugin.define({
           title: "My prompts",
           description: "Show your prompts in this session and jump to one",
           group: "Session",
-          bind: "alt+m",
+          bind: "<leader>p",
           palette: true,
           slash: { name: "myprompts", aliases: ["my-prompts"] },
           run: () => toggle(context),
