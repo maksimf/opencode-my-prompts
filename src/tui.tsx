@@ -219,7 +219,7 @@ function PromptBlock(props: {
       {wrapped.lines.map((line, index) => {
         const last = index === wrapped.lines.length - 1
         const cut = wrapped.clipped && last ? truncate(line, Math.max(1, props.budget() - 1)) : line
-        return <text fg={theme().text.base}>{wrapped.clipped && last && !cut.endsWith("…") ? `${cut}…` : cut}</text>
+        return <text fg={theme().text.muted}>{wrapped.clipped && last && !cut.endsWith("…") ? `${cut}…` : cut}</text>
       })}
     </box>
   )

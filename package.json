@@ -1,6 +1,6 @@
 {
   "name": "opencode-my-prompts",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "OpenCode TUI plugin: a side panel listing only your prompts in the current session. Click one to jump to it.",
   "type": "module",
   "exports": {
