@@ -1,5 +1,7 @@
 # opencode-my-prompts
 
+**Press `ctrl+x` then `p` to open or close the panel.**
+
 An OpenCode 2 TUI plugin: a side panel that lists **only your prompts** in the
 current session. Click a prompt to jump to it in the transcript.
 
