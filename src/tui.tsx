@@ -511,7 +511,7 @@ function MyPromptsPanel(props: { context: Context; panel: PanelInput }) {
 
   return (
     <box flexDirection="column" width="100%" flexGrow={1}>
-      <box flexDirection="row" gap={1} flexShrink={0} paddingLeft={2} paddingRight={1}>
+      <box flexDirection="row" gap={1} flexShrink={0} marginTop={1} paddingLeft={2} paddingRight={1}>
         <text fg={context.theme.text.base}>My prompts</text>
         <text fg={context.theme.text.muted}>{live(() => `(${promptCount()})`)}</text>
       </box>
